@@ -15,23 +15,30 @@ Esta é uma aplicação simples de lista de tarefas construída com Node.js e Do
     cd todo-app
     ```
 
-2. Construa e inicie os contêineres Docker:
+2. Construa a imagem Docker:
+    ```sh
+    docker-compose build
+    ```
+
+3. Inicie os contêineres Docker:
     ```sh
     docker-compose up -d
     ```
 
-3. Acesse a aplicação em [http://localhost:3000](http://localhost:3000).
+4. Acesse a aplicação em [http://localhost:3000](http://localhost:3000).
 
 ## Endpoints da API
 
 - **Obter todas as tarefas**: `GET /tarefas`
 - **Obter uma tarefa específica**: `GET /tarefas/:id`
 - **Adicionar uma nova tarefa**: `POST /tarefas`
+  
   ```json
   {
     "tarefa": "Minha nova tarefa"
   }
 - **Atualizar uma tarefa existente**: `PUT /tarefas/:id`
+  
   ```json
   {
     "tarefa": "Minha tarefa atualizada"
@@ -50,5 +57,8 @@ Os prints das principais etapas do processo estão na pasta [prints](prints).
 3. **Sistema executando**
     ![Sistema Executando](prints/03_system_running.png)
 
-4. **Dados sendo persistidos**
-    ![Dados Sendo Persistidos](prints/04_data_persisted.png)
+4. **Dados sendo salvos**
+    ![Dados Sendo Salvos](prints/04_data_register.png)
+ 
+5. **Dados sendo persistidos**
+    ![Dados Sendo Persistidos](prints/05_data_persisted.png)
